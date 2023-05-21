@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Tomenio's Relationship Survey Form</title>
+    <style>
+      body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient( 115deg, rgba(145, 66, 105, 0.8), rgba(81, 94, 36, 0.7) );
+    color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+  }
+  
+  h1 {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  p {
+    width: 80vw;
+    margin: 2em auto;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(234, 220, 220);
+  }
+  
+  form {
+    width: 100vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #d7d7e5;
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+    margin: 0.2rem 0;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  input, textarea {
+    background-color: #e5e5e5;
+    border: 1px solid #050510;
+    color: #131010;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: white;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+  label[for="character"] {
+    padding: 1px 2px;
+  }
+    </style>
+</head>
+<body>
+    <h1 id="title">Read-Select-Decide</h1>
+    <p id="description"><em>The decision is up to you; whether you participate in this survey as participant, evaluate it like a spectator, or let it hang into its own place, just as uninterested as you are.</em></p>
+    <form id="survey-form">
+        <label id="name-label">Enter your name:
+            <input id="name" type="text" placeholder="Name" required />
+        </label>
+        <label id="email-label">Enter your email:
+            <input id="email" type="email" placeholder="Email" required />
+        </label>
+        <label id="number-label">Select your age:
+            <input id="number" type="number" placeholder="Age" min="13" max="60" />
+        </label>
+        <fieldset>
+            <label for="major-cause">Which do you think is the major cause of failed relationships?
+                <select id="dropdown" name="major-cause">
+                    <option value="">(select one)</option>
+                    <option value="1">Lack of communication</option>
+                    <option value="2">Having a distant relationship</option>
+                    <option value="3">Lack of time spent together</option>
+                    <option value="4">Cheating Issue</option>
+                    <option value="5">Incompatible personalities</option>
+                    <option value="6">Unaligned life goals and priorities</option>
+                    <option value="7">Differences in beliefs and principles</option>
+                    <option value="8">Others</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="character">Have you had failed relationships?<br>
+                    <input id="character" type="radio" name="character" value="value" class="inline">I have<br>
+                    <input id="character" type="radio" name="character" value="value" class="inline">I have not<br>
+                    <input id="character" type="radio" name="character" value="value" class="inline">It's complicated<br>
+                    <input id="character" type="radio" name="character" value="value" class="inline">I prefer not to say
+                </fieldset>
+            </label>
+            <fieldset>
+                <label for="own-experience">If yes, which of the aforementioned causes above are the reasons why they failed? (Check all that apply)<br>
+                    <label for="lack of communication"> <input id="lack of communication" type="checkbox" name="aforementioned" value="lack of communication" class="inline">Lack of communication</label>
+                    <label for="distant relationship"> <input id="distant relationship" type="checkbox" name="aforementioned" value="distant relationship" class="inline">Having a distant relationship</label>
+                    <label for="lack of time"> <input id="lack of time" type="checkbox" name="aforementioned" value="lack of time" class="inline">Lack of time spent together</label>
+                    <label for="cheating"> <input id="cheating" type="checkbox" name="aforementioned" value="cheating" class="inline">Cheating Issue</label>
+                    <label for="Incomptatible"> <input id="Incompatible" type="checkbox" name="aforementioned" value="Incomptatible" class="inline">Incompatible personalities</label>
+                    <label for="unaligned"> <input id="unaligned" type="checkbox" name="aforementioned" value="unaligned" class="inline">Unaligned life goals and priorities</label>
+                    <label for="differences"><input id="differences" type="checkbox" name="aforementioned" value="differences" class="inline">Differences in beliefs and principles </label>
+                    <label for="other"> <input id="other" type="checkbox" name="aforementioned" value="other" class="inline">Others</label>
+                <fieldset>
+                    <label for="explanation">If none is your answer, then provide your own explanation regarding the rationale above.
+                        <textarea id="explanation" name="explanation" rows="5" cols="36" placeholder="For me, failed relationships are caused by..."></textarea></label>
+                    </fieldset>
+                    <input id="submit" type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
